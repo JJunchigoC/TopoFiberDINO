@@ -1,0 +1,153 @@
+{
+  "status": "no_ground_truth",
+  "boundary_tolerance_roi_px": 2,
+  "aggregation": "Macro mean over annotated frames with defined metric",
+  "annotation_hashes": {},
+  "summary": {
+    "baseline": {
+      "val": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      },
+      "test": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      }
+    },
+    "directional": {
+      "val": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      },
+      "test": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      }
+    },
+    "full": {
+      "val": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      },
+      "test": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      }
+    },
+    "unet_small": {
+      "val": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      },
+      "test": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      }
+    },
+    "dino_linear": {
+      "val": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      },
+      "test": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      }
+    },
+    "dino_pyramid": {
+      "val": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      },
+      "test": {
+        "count": 0,
+        "iou": null,
+        "dice": null,
+        "precision": null,
+        "recall": null,
+        "boundary_f1": null,
+        "assd_roi_px": null,
+        "hd95_roi_px": null,
+        "vertex_error_roi_px": null
+      }
+    }
+  },
+  "frames": []
+}

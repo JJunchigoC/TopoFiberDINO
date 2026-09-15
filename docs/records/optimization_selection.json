@@ -1,0 +1,513 @@
+{
+  "selected": "spatial",
+  "rule": "Minimum validation pseudo_supervision_loss over three full trials, each 1000 epochs. Baseline is not a candidate.",
+  "test_evaluated_before_selection": false,
+  "scope": "This optimization round; historical test outcomes were already known.",
+  "final_common_fix": "Clamp training translations to the representable scene bounds for both models; fresh 1000-epoch final runs.",
+  "trials": {
+    "geometry": {
+      "config": {
+        "name": "TopoFiberDINO Scene (ours)",
+        "architecture_revision": 5,
+        "representation": "triangle_vertices_v2",
+        "coordinate_weight": 5.0,
+        "seed": 20260914,
+        "epochs": 1000,
+        "log_interval": 25,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.001,
+        "work_size": [
+          448,
+          200
+        ],
+        "backbone_size": [
+          840,
+          378
+        ],
+        "variants": [
+          "full"
+        ],
+        "temporal_weight": 0.02,
+        "boundary_weight": 0.0,
+        "vertex_weight": 0.0,
+        "mrf": {
+          "kind": "potts_8",
+          "weight": 0.002,
+          "color_sigma": 0.1
+        },
+        "topology": {
+          "enabled": true,
+          "clusters": 4,
+          "grid_size": [
+            28,
+            12
+          ],
+          "embedding_dim": 32,
+          "dtm_neighbors": 3,
+          "bins": [
+            0,
+            0.01,
+            0.02,
+            0.04,
+            0.08,
+            0.12,
+            0.2,
+            0.35,
+            1.2
+          ],
+          "weight": 0.02,
+          "cdf_weight": 0.5,
+          "proportion_weight": 0.01,
+          "warmup_epochs": 10
+        },
+        "shots": 0,
+        "note": "Scene geometry with free apex height, feature dropout, consistent translation supervision and bounded zero-initialized topology residual. Validation-only development; no accuracy claim without ground truth.",
+        "feature_dropout": 0.15,
+        "translation_weight": 0.0,
+        "translation_range": [
+          0.02,
+          0.025
+        ],
+        "topology_residual_scale": 0.15
+      },
+      "metrics": {
+        "pseudo_supervision_loss": 0.52311088794317,
+        "pseudo_mask_iou": 0.4893106740984896,
+        "true_mask_iou": null,
+        "pseudo_vertex_error_normalized": 0.08395652587597187,
+        "note": "Triangle pseudo-label agreement; not true location accuracy."
+      },
+      "summary": {
+        "epochs_run": 1000,
+        "epochs_requested": 1000,
+        "early_stopping": false,
+        "best_epoch": 5,
+        "last_epoch": 1000,
+        "inference_checkpoint": "best.pt",
+        "stop_reason": "completed_requested_epochs",
+        "elapsed_seconds": 338.8662149000447,
+        "trainable_parameters": 115222,
+        "temporal_loss_enabled": true,
+        "ground_truth_used": false,
+        "mrf": {
+          "kind": "potts_8",
+          "weight": 0.002,
+          "color_sigma": 0.1
+        },
+        "topology": {
+          "enabled": true,
+          "clusters": 4,
+          "grid_size": [
+            28,
+            12
+          ],
+          "embedding_dim": 32,
+          "dtm_neighbors": 3,
+          "bins": [
+            0,
+            0.01,
+            0.02,
+            0.04,
+            0.08,
+            0.12,
+            0.2,
+            0.35,
+            1.2
+          ],
+          "weight": 0.02,
+          "cdf_weight": 0.5,
+          "proportion_weight": 0.01,
+          "warmup_epochs": 10
+        },
+        "model_info": {
+          "label": "FiberDINO Triangle-MRF (ours)",
+          "backbone": "DINOv2-S/14 Registers",
+          "auxiliary": true,
+          "temporal": true
+        }
+      },
+      "checkpoint_sha256": "c50b8b78b21f491f4a2e47e91c06bb00569a169f06227e87092e1c2cdb4d4094"
+    },
+    "augmented": {
+      "config": {
+        "name": "TopoFiberDINO Scene (ours)",
+        "architecture_revision": 5,
+        "representation": "triangle_vertices_v2",
+        "coordinate_weight": 5.0,
+        "seed": 20260914,
+        "epochs": 1000,
+        "log_interval": 25,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.001,
+        "work_size": [
+          448,
+          200
+        ],
+        "backbone_size": [
+          840,
+          378
+        ],
+        "variants": [
+          "full"
+        ],
+        "temporal_weight": 0.02,
+        "boundary_weight": 0.0,
+        "vertex_weight": 0.0,
+        "mrf": {
+          "kind": "potts_8",
+          "weight": 0.002,
+          "color_sigma": 0.1
+        },
+        "topology": {
+          "enabled": true,
+          "clusters": 4,
+          "grid_size": [
+            28,
+            12
+          ],
+          "embedding_dim": 32,
+          "dtm_neighbors": 3,
+          "bins": [
+            0,
+            0.01,
+            0.02,
+            0.04,
+            0.08,
+            0.12,
+            0.2,
+            0.35,
+            1.2
+          ],
+          "weight": 0.02,
+          "cdf_weight": 0.5,
+          "proportion_weight": 0.01,
+          "warmup_epochs": 10
+        },
+        "shots": 0,
+        "note": "Scene geometry with free apex height, feature dropout, consistent translation supervision and bounded zero-initialized topology residual. Validation-only development; no accuracy claim without ground truth.",
+        "feature_dropout": 0.15,
+        "translation_weight": 0.5,
+        "translation_range": [
+          0.02,
+          0.025
+        ],
+        "topology_residual_scale": 0.15
+      },
+      "metrics": {
+        "pseudo_supervision_loss": 0.5199198845105294,
+        "pseudo_mask_iou": 0.495994098261371,
+        "true_mask_iou": null,
+        "pseudo_vertex_error_normalized": 0.08402992211855374,
+        "note": "Triangle pseudo-label agreement; not true location accuracy."
+      },
+      "summary": {
+        "epochs_run": 1000,
+        "epochs_requested": 1000,
+        "early_stopping": false,
+        "best_epoch": 8,
+        "last_epoch": 1000,
+        "inference_checkpoint": "best.pt",
+        "stop_reason": "completed_requested_epochs",
+        "elapsed_seconds": 767.5900588999502,
+        "trainable_parameters": 115222,
+        "temporal_loss_enabled": true,
+        "ground_truth_used": false,
+        "mrf": {
+          "kind": "potts_8",
+          "weight": 0.002,
+          "color_sigma": 0.1
+        },
+        "topology": {
+          "enabled": true,
+          "clusters": 4,
+          "grid_size": [
+            28,
+            12
+          ],
+          "embedding_dim": 32,
+          "dtm_neighbors": 3,
+          "bins": [
+            0,
+            0.01,
+            0.02,
+            0.04,
+            0.08,
+            0.12,
+            0.2,
+            0.35,
+            1.2
+          ],
+          "weight": 0.02,
+          "cdf_weight": 0.5,
+          "proportion_weight": 0.01,
+          "warmup_epochs": 10
+        },
+        "model_info": {
+          "label": "FiberDINO Triangle-MRF (ours)",
+          "backbone": "DINOv2-S/14 Registers",
+          "auxiliary": true,
+          "temporal": true
+        }
+      },
+      "checkpoint_sha256": "60e2ed5bf85eefcb1185219843864497b51e101efa9f27f3045a186a657dca1f"
+    },
+    "spatial": {
+      "config": {
+        "name": "TopoFiberDINO Scene (ours)",
+        "architecture_revision": 5,
+        "representation": "triangle_vertices_v2",
+        "coordinate_weight": 5.0,
+        "seed": 20260914,
+        "epochs": 1000,
+        "log_interval": 25,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.001,
+        "work_size": [
+          448,
+          200
+        ],
+        "backbone_size": [
+          840,
+          378
+        ],
+        "variants": [
+          "full"
+        ],
+        "temporal_weight": 0.02,
+        "boundary_weight": 0.0,
+        "vertex_weight": 0.0,
+        "mrf": {
+          "kind": "potts_8",
+          "weight": 0.002,
+          "color_sigma": 0.1
+        },
+        "topology": {
+          "enabled": true,
+          "clusters": 4,
+          "grid_size": [
+            28,
+            12
+          ],
+          "embedding_dim": 32,
+          "dtm_neighbors": 3,
+          "bins": [
+            0,
+            0.01,
+            0.02,
+            0.04,
+            0.08,
+            0.12,
+            0.2,
+            0.35,
+            1.2
+          ],
+          "weight": 0.02,
+          "cdf_weight": 0.5,
+          "proportion_weight": 0.01,
+          "warmup_epochs": 10
+        },
+        "shots": 0,
+        "note": "Scene geometry with free apex height, feature dropout, consistent translation supervision and bounded zero-initialized topology residual. Validation-only development; no accuracy claim without ground truth.",
+        "feature_dropout": 0.15,
+        "translation_weight": 0.5,
+        "translation_range": [
+          0.02,
+          0.025
+        ],
+        "topology_residual_scale": 0.15,
+        "coordinate_head": "spatial_integral"
+      },
+      "metrics": {
+        "pseudo_supervision_loss": 0.5007609190084995,
+        "pseudo_mask_iou": 0.511346454556028,
+        "true_mask_iou": null,
+        "pseudo_vertex_error_normalized": 0.08239242510917859,
+        "note": "Triangle pseudo-label agreement; not true location accuracy."
+      },
+      "summary": {
+        "epochs_run": 1000,
+        "epochs_requested": 1000,
+        "early_stopping": false,
+        "best_epoch": 17,
+        "last_epoch": 1000,
+        "inference_checkpoint": "best.pt",
+        "stop_reason": "completed_requested_epochs",
+        "elapsed_seconds": 960.4584663999849,
+        "trainable_parameters": 112786,
+        "temporal_loss_enabled": true,
+        "ground_truth_used": false,
+        "mrf": {
+          "kind": "potts_8",
+          "weight": 0.002,
+          "color_sigma": 0.1
+        },
+        "topology": {
+          "enabled": true,
+          "clusters": 4,
+          "grid_size": [
+            28,
+            12
+          ],
+          "embedding_dim": 32,
+          "dtm_neighbors": 3,
+          "bins": [
+            0,
+            0.01,
+            0.02,
+            0.04,
+            0.08,
+            0.12,
+            0.2,
+            0.35,
+            1.2
+          ],
+          "weight": 0.02,
+          "cdf_weight": 0.5,
+          "proportion_weight": 0.01,
+          "warmup_epochs": 10
+        },
+        "model_info": {
+          "label": "TopoFiberDINO Scene (ours)",
+          "backbone": "DINOv2-S/14 Registers",
+          "auxiliary": true,
+          "temporal": true
+        }
+      },
+      "checkpoint_sha256": "1ae4f8f7bbac2416cc0750f8c9bd57361e21ccda74cc273d6fd22ca737970ca8"
+    },
+    "baseline": {
+      "config": {
+        "name": "TopoFiberDINO Scene (ours)",
+        "architecture_revision": 5,
+        "representation": "triangle_vertices_v2",
+        "coordinate_weight": 5.0,
+        "seed": 20260914,
+        "epochs": 1000,
+        "log_interval": 25,
+        "batch_size": 8,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.001,
+        "work_size": [
+          448,
+          200
+        ],
+        "backbone_size": [
+          840,
+          378
+        ],
+        "variants": [
+          "baseline"
+        ],
+        "temporal_weight": 0.02,
+        "boundary_weight": 0.0,
+        "vertex_weight": 0.0,
+        "mrf": {
+          "kind": "potts_8",
+          "weight": 0.002,
+          "color_sigma": 0.1
+        },
+        "topology": {
+          "enabled": true,
+          "clusters": 4,
+          "grid_size": [
+            28,
+            12
+          ],
+          "embedding_dim": 32,
+          "dtm_neighbors": 3,
+          "bins": [
+            0,
+            0.01,
+            0.02,
+            0.04,
+            0.08,
+            0.12,
+            0.2,
+            0.35,
+            1.2
+          ],
+          "weight": 0.02,
+          "cdf_weight": 0.5,
+          "proportion_weight": 0.01,
+          "warmup_epochs": 10
+        },
+        "shots": 0,
+        "note": "Scene geometry with free apex height, feature dropout, consistent translation supervision and bounded zero-initialized topology residual. Validation-only development; no accuracy claim without ground truth.",
+        "feature_dropout": 0.15,
+        "translation_weight": 0.5,
+        "translation_range": [
+          0.02,
+          0.025
+        ],
+        "topology_residual_scale": 0.15
+      },
+      "metrics": {
+        "pseudo_supervision_loss": 0.5322308586193965,
+        "pseudo_mask_iou": 0.4966466643134486,
+        "true_mask_iou": null,
+        "pseudo_vertex_error_normalized": 0.08243687489093879,
+        "note": "Triangle pseudo-label agreement; not true location accuracy."
+      },
+      "summary": {
+        "epochs_run": 1000,
+        "epochs_requested": 1000,
+        "early_stopping": false,
+        "best_epoch": 26,
+        "last_epoch": 1000,
+        "inference_checkpoint": "best.pt",
+        "stop_reason": "completed_requested_epochs",
+        "elapsed_seconds": 388.9104384999955,
+        "trainable_parameters": 78111,
+        "temporal_loss_enabled": false,
+        "ground_truth_used": false,
+        "mrf": null,
+        "topology": null,
+        "model_info": {
+          "label": "DINO base adapter",
+          "backbone": "DINOv2-S/14 Registers",
+          "auxiliary": false,
+          "temporal": false
+        }
+      },
+      "checkpoint_sha256": "ca1b768deed493427fd38b203581b08a02e8606be3c2e7555cfab9bc20c5d2e2"
+    }
+  },
+  "dataset_sha256": "7a61a477949aba716bd87710bd1557f409ae3fdb0bc7bd0591bf654428b1ba3a",
+  "checkpoint_alignment": {
+    "reason": "The requested output is three vertices; region loss and vertex error rank checkpoints differently.",
+    "previous_region_selected_test_iou": 0.47236606610189713,
+    "new_selection": "Minimum validation pseudo_vertex_error_normalized, identical rule for baseline and ours.",
+    "optimizer_and_architecture_changed": false,
+    "test_is_blind": false,
+    "architecture_choice_unchanged_on_vertex_metric": true
+  },
+  "architecture_confirmation_by_vertex": {
+    "geometry": {
+      "epoch": 8,
+      "pseudo_vertex_error_normalized": 0.0801062538073613,
+      "pseudo_mask_iou": 0.4964830391451552,
+      "pseudo_supervision_loss": 0.5358606194838499
+    },
+    "augmented": {
+      "epoch": 9,
+      "pseudo_vertex_error_normalized": 0.07929646051847018,
+      "pseudo_mask_iou": 0.5010231215250469,
+      "pseudo_supervision_loss": 0.5506099324959975
+    },
+    "spatial": {
+      "epoch": 247,
+      "pseudo_vertex_error_normalized": 0.07518569781230046,
+      "pseudo_mask_iou": 0.5166595966905382,
+      "pseudo_supervision_loss": 0.5541197428336511
+    },
+    "baseline": {
+      "epoch": 28,
+      "pseudo_vertex_error_normalized": 0.0784298395499205,
+      "pseudo_mask_iou": 0.5081293087063946,
+      "pseudo_supervision_loss": 0.5514829326898624
+    }
+  }
+}

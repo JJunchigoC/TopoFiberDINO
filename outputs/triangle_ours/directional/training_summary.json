@@ -1,0 +1,23 @@
+{
+  "epochs_run": 500,
+  "epochs_requested": 500,
+  "early_stopping": false,
+  "best_epoch": 9,
+  "last_epoch": 500,
+  "inference_checkpoint": "best.pt",
+  "stop_reason": "completed_requested_epochs",
+  "elapsed_seconds": 130.87083670002175,
+  "trainable_parameters": 79071,
+  "temporal_loss_enabled": false,
+  "ground_truth_used": false,
+  "mrf": null,
+  "topology": null,
+  "checkpoint_selection": "vertex_error",
+  "validation_selection_score": 0.07972298218653752,
+  "model_info": {
+    "label": "DINO direction + auxiliary",
+    "backbone": "DINOv2-S/14 Registers",
+    "auxiliary": true,
+    "temporal": false
+  }
+}

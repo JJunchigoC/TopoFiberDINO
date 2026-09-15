@@ -1,0 +1,45 @@
+{
+  "rule": "Top diagnostic priority, unique test frames, across requested models",
+  "items": [
+    {
+      "id": "V01_f0000097",
+      "model": "unet_small",
+      "priority": 25.909
+    },
+    {
+      "id": "V02_f0000097",
+      "model": "unet_small",
+      "priority": 25.615
+    },
+    {
+      "id": "V01_f0000100",
+      "model": "baseline",
+      "priority": 24.131
+    },
+    {
+      "id": "V02_f0000096",
+      "model": "baseline",
+      "priority": 22.548
+    },
+    {
+      "id": "V02_f0000094",
+      "model": "dino_pyramid",
+      "priority": 22.094
+    },
+    {
+      "id": "V02_f0000100",
+      "model": "baseline",
+      "priority": 21.95
+    },
+    {
+      "id": "V01_f0000099",
+      "model": "baseline",
+      "priority": 21.527
+    },
+    {
+      "id": "V01_f0000094",
+      "model": "dino_pyramid",
+      "priority": 21.229
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source": "Exactly three-point triangle seeds; DINO train-only prototypes weight confidence",
+  "representation": "triangle_vertices_v2",
+  "vertex_order": [
+    "A_left_apex",
+    "B_upper_right",
+    "C_lower_right"
+  ],
+  "human_training_ids": [],
+  "human_training_count": 0,
+  "ground_truth": false,
+  "old_run_reused": false
+}

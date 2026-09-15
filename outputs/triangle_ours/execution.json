@@ -1,0 +1,17 @@
+{
+  "mode": "locked_500_epoch_comparison",
+  "retrained_models": [
+    "baseline",
+    "directional",
+    "unet_small",
+    "dino_linear",
+    "dino_pyramid"
+  ],
+  "reused_models": [
+    "full"
+  ],
+  "epochs_per_model": 500,
+  "early_stopping": false,
+  "replaces_previous_output": true,
+  "ours_checkpoint_source": "selected validation-only 500-epoch trial"
+}

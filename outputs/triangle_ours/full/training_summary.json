@@ -1,0 +1,51 @@
+{
+  "epochs_run": 500,
+  "epochs_requested": 500,
+  "early_stopping": false,
+  "best_epoch": 5,
+  "last_epoch": 500,
+  "inference_checkpoint": "best.pt",
+  "stop_reason": "completed_requested_epochs",
+  "elapsed_seconds": 302.1742462000111,
+  "trainable_parameters": 112786,
+  "temporal_loss_enabled": true,
+  "ground_truth_used": false,
+  "mrf": {
+    "kind": "potts_8",
+    "weight": 0.002,
+    "color_sigma": 0.1
+  },
+  "topology": {
+    "enabled": true,
+    "clusters": 4,
+    "grid_size": [
+      28,
+      12
+    ],
+    "embedding_dim": 32,
+    "dtm_neighbors": 3,
+    "bins": [
+      0,
+      0.01,
+      0.02,
+      0.04,
+      0.08,
+      0.12,
+      0.2,
+      0.35,
+      1.2
+    ],
+    "weight": 0.02,
+    "cdf_weight": 0.5,
+    "proportion_weight": 0.01,
+    "warmup_epochs": 10
+  },
+  "checkpoint_selection": "vertex_error",
+  "validation_selection_score": 0.07486281410241738,
+  "model_info": {
+    "label": "TopoFiberDINO Scene (ours)",
+    "backbone": "DINOv2-S/14 Registers",
+    "auxiliary": true,
+    "temporal": true
+  }
+}

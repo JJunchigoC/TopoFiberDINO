@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checkpoint_sha256_before": {
+    "baseline/best.pt": "a73f4e86394fd858ee31a451b0326ce05f28c9eb8e2984d04e12edf8c6da6c89",
+    "baseline/last.pt": "8a6b649a66a646ba1fa8c9fc756fd50f899c2760a79a1997a59da95f86f9b889",
+    "dino_linear/best.pt": "a4ea3a3a4369f517f31d3a6edaff516d446a6de7534d6b484221491ba0cf223a",
+    "dino_linear/last.pt": "4c7981e63459de55fde7704a75305c2e65eb80b27feee21bdbf8dc05d71b6542",
+    "dino_pyramid/best.pt": "ee1746171d143a0bdc1f5b2fc8089a0a07df6146c8e517c7d47d2420ef67c6a6",
+    "dino_pyramid/last.pt": "249f5619898abb010a35e7b06cf1b7483628cbaddf5a96a7b3d956f9522a810f",
+    "directional/best.pt": "9a15c34a8ef4bcf0eebb46c3a168b76c52ba2fdaaada860a96b1066dd2ddf19a",
+    "directional/last.pt": "91a09507f21c3664ae6626ea6edf3b37dd9861e535e2059d3e1aa8b788d46570",
+    "full/best.pt": "4c294c126a2ca59b305074188490e426b15e32ce1fcbdbea304b816f0511d6b0",
+    "full/last.pt": "ab7e733c2d9e3614af1909057c5cdfd00a6a1cc716c025f0989a5483531af553",
+    "unet_small/best.pt": "375301c91e09985743a761dda85537c125e9aa60e5ee64b4ec294833f09dc474",
+    "unet_small/last.pt": "f5a09e3e76c78b6a201e6cefa0417d1b5a52afe28591a1230753eaab5e7aadaa"
+  },
+  "checkpoint_bytes_preserved": true,
+  "stale_output_removed": true,
+  "pending_and_backup_removed": true,
+  "all_models_epochs": 1000,
+  "epochs_tests_passed": 23
+}

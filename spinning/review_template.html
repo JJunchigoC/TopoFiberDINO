@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>纺纱三角区 · 模型复核</title>
+<style>
+:root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#dce8f1;background:#0e1722}body{max-width:1600px;margin:auto;padding:24px}h1{font-size:26px;margin:0 0 12px}p{line-height:1.7}a{color:#7bd6df}.notice{background:#233246;border-left:4px solid #f3bc65;padding:12px 18px;border-radius:5px}.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:20px 0}select,button{background:#26394d;color:white;border:1px solid #587087;border-radius:5px;padding:9px;cursor:pointer}label{font-size:14px}.panels{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{background:#1a293a;border-radius:8px;overflow:hidden}.panel h2{font-size:16px;margin:12px 16px}.panel img{width:100%;height:auto;display:block;object-fit:contain}.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:18px 0}.metric{background:#1a293a;padding:13px;border-radius:7px}.metric b{display:block;font-size:22px;padding-top:8px}.muted{color:#a9bfd1;font-size:13px}input[type=range]{flex:1;min-width:200px}#flags{color:#f3bc65}details{background:#1a293a;padding:14px;border-radius:7px;margin:15px 0}.empty{padding:40px;text-align:center}footer{margin-top:20px;font-size:13px;color:#a9bfd1}@media(max-width:800px){body{padding:12px}.panels{grid-template-columns:1fr}}
+</style></head><body>
+<h1>纺纱三角区 · 三点三角形复核</h1>
+__MRF_LINKS__
+<p class="notice"><b>输出只有 A、B、C 三点及 AB、BC、CA 三条直边。</b>模型直接预测三个顶点，三角形内部不填色。形状符合定义不代表位置准确；复核优先级也不是准确率。尺寸为原视频像素，毫米尚未标定。</p>
+<p><a href="REPORT.md">实验报告</a> · <a href="quality/README.md">指标与使用说明</a> · <a href="quality/frame_diagnostics.csv">逐帧诊断 CSV</a> · <a href="quality/model_summary.csv">模型汇总 CSV</a> · <a href="quality/ground_truth_metrics.json">真实标注评估</a> · <a href="figures/all_models_comparison.png">全部模型对照大图</a> · <a href="figures/measurement_timeseries.png">尺寸时间曲线</a></p>
+<div class="controls"><label>模型 <select id="model"></select></label><label>分组 <select id="split"><option value="test">测试组</option><option value="val">验证组</option><option value="train">训练组</option><option value="all">全部</option></select></label><label>顺序 <select id="sort"><option value="priority">优先复核</option><option value="time">视频时间</option></select></label><label>视频 <select id="sequence"><option value="all">全部</option></select></label></div>
+<div class="controls"><button id="prev">← 上一帧</button><input id="position" type="range" min="0" value="0" aria-label="帧序号"><button id="next">下一帧 →</button><span id="counter"></span></div>
+<h2 id="frame"></h2><p id="flags"></p><p id="coordinates"></p><p><a id="triangle_file">打开纯三点三角形 SVG</a></p><div id="metrics" class="metrics"></div>
+<div class="panels"><section class="panel"><h2>原始 ROI</h2><img id="original" alt="原始 ROI"></section><section class="panel"><h2>三点三角形 · AB / BC / CA</h2><img id="overlay" alt="三点与三条直边"></section><section class="panel"><h2>软三角形熵 · 黑紫低 → 橙黄高（0–1）</h2><img id="entropy" alt="软三角形熵热图"></section><section class="panel"><h2>三角形投票分歧 · 黑紫低 → 橙黄高（0–1）</h2><img id="disagreement" alt="三角形分歧热图"></section></div>
+<details><summary>我该检查什么？</summary><p>A 是否位于纤维汇聚处？B/C 是否对应你定义的上、下端点？AB、AC 的方向及 BC 的长度是否合理？自动目标中的 B/C 仍是最大可见展开截面的代理点，需要核对物理定义。</p><p>保持同一帧切换模型比较，再按视频时间看三个点及尺寸变化。软三角形的边缘熵主要来自栅格化过渡，不能当作顶点定位置信度。</p><p>真实评估：在 dataset/annotations/val 和 test 放入同名 JSON，格式为 {"vertices_roi":[[Ax,Ay],[Bx,By],[Cx,Cy]]}，使用原 ROI 像素坐标，再运行 python main.py --predict-only。自动三点和 valid_masks 都不是真值。</p></details>
+<p id="videos">连续视频：</p><footer id="footer"></footer>
+<script type="application/json" id="data">__REVIEW_DATA__</script>
+<script>
+"use strict";
+const data=JSON.parse(document.getElementById('data').textContent);
+const el=id=>document.getElementById(id);
+for(const video of data.videos){const link=document.createElement('a');link.href=video.file;link.textContent=` ${video.sequence} / ${data.labels[video.model]}（${video.frames}帧） `;el('videos').append(link);}
+let filtered=[],index=0;
+for(const name of data.models){el('model').add(new Option(data.labels[name],name));}
+el('model').value=data.default_model;
+for(const name of [...new Set(data.records.map(r=>r.sequence))].sort()){el('sequence').add(new Option(name,name));}
+const labels={invalid_triangle:'三角形越界或无效',empty_prediction:'预测为空',threshold_sensitive:'软边界对阈值敏感',models_disagree:'三角形分歧较大',temporal_change:'邻帧变化较大',fragmented_raw_mask:'三角形栅格异常'};
+function number(value,digits=3){return value===null||value===undefined?'未提供':Number(value).toFixed(digits);}
+function update(preserve){
+ const old=preserve&&filtered[index]?filtered[index].id:null;
+ filtered=data.records.filter(r=>r.model===el('model').value&&(el('split').value==='all'||r.split===el('split').value)&&(el('sequence').value==='all'||r.sequence===el('sequence').value));
+ filtered.sort(el('sort').value==='priority'?(a,b)=>b.review_priority-a.review_priority:(a,b)=>a.sequence.localeCompare(b.sequence)||a.time_seconds-b.time_seconds);
+ index=Math.max(0,filtered.findIndex(r=>r.id===old));render();
+}
+function render(){
+ const r=filtered[index];el('position').max=Math.max(0,filtered.length-1);el('position').value=index;
+ el('prev').disabled=index<=0;el('next').disabled=index>=filtered.length-1;
+ el('counter').textContent=`${filtered.length?index+1:0} / ${filtered.length}`;
+ if(!r){el('frame').textContent='这个分组没有帧';el('flags').textContent='';el('coordinates').textContent='';el('triangle_file').removeAttribute('href');el('metrics').replaceChildren();for(const key of ['original','overlay','entropy','disagreement'])el(key).removeAttribute('src');return;}
+ el('frame').textContent=`${r.id} · ${r.split} · 原视频 ${number(r.time_seconds)} s`;
+ el('coordinates').textContent=r.vertices_roi?'ROI 坐标：'+r.vertices_roi.map((p,i)=>`${'ABC'[i]} (${number(p[0],1)}, ${number(p[1],1)})`).join(' · '):'未导出有效三角形';
+ el('triangle_file').href=r.triangle_svg;
+ el('flags').textContent=r.flags?'优先检查：'+r.flags.split(';').map(x=>labels[x]||x).join('、'):'无启发式异常提示；仍需检查轮廓是否正确。';
+ for(const key of ['original','overlay','entropy','disagreement'])el(key).src=r[key];
+ const metrics=[['复核优先级 / 100',r.review_priority,1],['阈值稳定性 IoU',r.threshold_stability_iou,3],['模型分歧',r.model_disagreement,3],['前景及边缘熵',r.foreground_boundary_entropy,3],['光流对齐 MAE',r.flow_warp_mae,4],['伪标签 IoU（非准确率）',r.pseudo_iou,3],['宽度 / 原视频 px',r.base_width_raw_px,1],['高度 / 原视频 px',r.height_raw_px,1],['真实 IoU',r.true_iou,3],['真实 Dice',r.true_dice,3]];
+ el('metrics').replaceChildren();for(const [label,value,digits] of metrics){const box=document.createElement('div');box.className='metric';const text=document.createElement('span');text.textContent=label;const strong=document.createElement('b');strong.textContent=number(value,digits);box.append(text,strong);el('metrics').append(box);}
+ el('footer').textContent=`${data.models.length} 个模型 · ${data.records.length} 条模型/帧记录 · 初始模型 ${data.labels[data.default_model]} 按验证伪监督损失选取，不代表真实准确率最高。热图灰色区域为无效填充。`;
+}
+for(const key of ['model','split','sort','sequence'])el(key).addEventListener('change',()=>update(true));
+el('position').addEventListener('input',()=>{index=Number(el('position').value);render();});
+el('prev').addEventListener('click',()=>{index=Math.max(0,index-1);render();});
+el('next').addEventListener('click',()=>{index=Math.min(filtered.length-1,index+1);render();});
+document.addEventListener('keydown',event=>{if(['SELECT','INPUT'].includes(event.target.tagName))return;if(event.key==='ArrowLeft')el('prev').click();if(event.key==='ArrowRight')el('next').click();});
+update(false);
+</script></body></html>

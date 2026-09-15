@@ -1,0 +1,23 @@
+{
+  "epochs_run": 500,
+  "epochs_requested": 500,
+  "early_stopping": false,
+  "best_epoch": 75,
+  "last_epoch": 500,
+  "inference_checkpoint": "best.pt",
+  "stop_reason": "completed_requested_epochs",
+  "elapsed_seconds": 131.03749110002536,
+  "trainable_parameters": 61031,
+  "temporal_loss_enabled": false,
+  "ground_truth_used": false,
+  "mrf": null,
+  "topology": null,
+  "checkpoint_selection": "vertex_error",
+  "validation_selection_score": 0.07646772418266688,
+  "model_info": {
+    "label": "Small RGB U-Net",
+    "backbone": "None; RGB encoder trained from scratch",
+    "auxiliary": false,
+    "temporal": false
+  }
+}

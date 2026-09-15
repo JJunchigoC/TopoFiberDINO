@@ -1,0 +1,34 @@
+{
+    "status":  "complete",
+    "remove":  [
+                   {
+                       "path":  "outputs/fiberdino",
+                       "files":  5068,
+                       "bytes":  501261390,
+                       "old_epochs":  80,
+                       "old_patience":  20
+                   },
+                   {
+                       "path":  "outputs/triangle_experiment_200",
+                       "files":  6220,
+                       "bytes":  386276972,
+                       "old_epochs":  200,
+                       "old_patience":  20
+                   }
+               ],
+    "keep":  [
+                 "dataset",
+                 "weights",
+                 "third_party/dinov2",
+                 ".cache",
+                 "archive/legacy_preprocessing_and_v1.zip"
+             ],
+    "removed_code":  [
+                         "tools/archive_legacy.py",
+                         "legacy import branch in spinning/prepare.py",
+                         "unused encoder channels and baseline direction operators",
+                         "unused EMA copies and validation dense-map transfers"
+                     ],
+    "removed_generated_bytes":  887538362,
+    "removed_bytecode_directories":  7
+}

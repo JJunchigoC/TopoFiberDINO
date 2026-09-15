@@ -1,0 +1,20 @@
+{
+  "V01": {
+    "frames": 9,
+    "ours_lower_vertex_error_than_original_baseline": 5,
+    "mean_pseudo_vertex_error": {
+      "full": 0.08543731982975798,
+      "original_baseline": 0.07898710546584636,
+      "baseline": 0.08726486759329061
+    }
+  },
+  "V02": {
+    "frames": 10,
+    "ours_lower_vertex_error_than_original_baseline": 4,
+    "mean_pseudo_vertex_error": {
+      "full": 0.08426506655644213,
+      "original_baseline": 0.07810472063059366,
+      "baseline": 0.07926518704799623
+    }
+  }
+}

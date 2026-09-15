@@ -1,0 +1,23 @@
+{
+  "epochs_run": 500,
+  "epochs_requested": 500,
+  "early_stopping": false,
+  "best_epoch": 34,
+  "last_epoch": 500,
+  "inference_checkpoint": "best.pt",
+  "stop_reason": "completed_requested_epochs",
+  "elapsed_seconds": 122.43245000002207,
+  "trainable_parameters": 78111,
+  "temporal_loss_enabled": false,
+  "ground_truth_used": false,
+  "mrf": null,
+  "topology": null,
+  "checkpoint_selection": "vertex_error",
+  "validation_selection_score": 0.07822308861292325,
+  "model_info": {
+    "label": "DINO base adapter",
+    "backbone": "DINOv2-S/14 Registers",
+    "auxiliary": false,
+    "temporal": false
+  }
+}

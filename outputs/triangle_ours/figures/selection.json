@@ -1,0 +1,9 @@
+{
+  "ids": [
+    "V01_f0000092",
+    "V01_f0000098",
+    "V02_f0000094",
+    "V02_f0000100"
+  ],
+  "rule": "Four evenly spaced entries of the predefined test list; no quality selection."
+}

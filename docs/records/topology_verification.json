@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "unit_tests_passed": 37,
+  "gudhi_version": "3.13.0",
+  "ours_hashes": {
+    "full/best.pt": "e5a6dc3fe8996bc312659c73249c4ab7b58b7435f861b8ccd7f0f59dc5d1096c",
+    "full/last.pt": "47c1edcb0a82fc4d843eb891c2ce9a6ba0e39fd7fc0fbf0d48409ebc56555ab1",
+    "topology/fitted.pt": "3f8ffcb66b41600a4f3b3c56d9f373bd56b0bea603be8290f727e929335d80bd"
+  },
+  "control_hashes": {
+    "full/best.pt": "c3cb19ec1da3398b105cfe529399e57cc6dbbe967a2b6a48323696f2f8be66f4",
+    "full/last.pt": "f21fb719e03672f8cd4fc47fecaee73dc9f882692916cc849d84eb25e7a43574",
+    "topology/fitted.pt": "0b14e5f34a4d66c09a53ff74b88c17b67050ab33b788afacd99950342bf23294"
+  },
+  "ours_epochs": 1000,
+  "ablation_epochs": 1000,
+  "strict_triangles": 384,
+  "legacy_directory_retained": true,
+  "legacy_historical_hash_difference": [
+    "full/best.pt",
+    "full/last.pt"
+  ],
+  "legacy_hash_note": "Historical MRF audit is not a start-of-turn snapshot. This turn training/export targets were triangle_ours and triangle_ours_ablation only.",
+  "reexport_preserves_weights_and_fitted_topology": true,
+  "stale_output_removed": true,
+  "topology_fit_identical": true,
+  "browser_visual_check": "not performed",
+  "inspected_figures": [
+    "topology_diagnostics_preview.png",
+    "topology_ablation_preview.png"
+  ]
+}

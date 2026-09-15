@@ -1,0 +1,14 @@
+{
+  "train": {
+    "count": 134,
+    "c_y_mean_absolute_mapping_difference": 0.026369391112059975,
+    "c_y_max_absolute_mapping_difference": 0.10983995790387163
+  },
+  "val": {
+    "count": 39,
+    "c_y_mean_absolute_mapping_difference": 0.023651156445695105,
+    "c_y_max_absolute_mapping_difference": 0.08010483134293955
+  },
+  "interpretation": "Diagnostic assuming a heatmap centered at actual C. Old head used C-channel evidence as relative-height parameter and could learn to compensate. This does not claim every old prediction has this error. New independent coordinate-distribution supervision requires an explicit point-consistent conversion.",
+  "test_evaluated": false
+}

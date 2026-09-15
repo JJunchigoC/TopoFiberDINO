@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "dataset_files_unchanged": 390,
+  "test_suite": {
+    "passed": 52,
+    "note": "Completed after model, training and production export changes; final follow-up edits affect report prose and documentation only."
+  },
+  "models": {
+    "baseline": {
+      "epochs": 500,
+      "best_epoch": 34,
+      "best_sha256": "728bdd6facf211dac04be9ed3240197a9f645657ac5b1aa03c84385ca9a420c0",
+      "last_sha256": "089f6476225f688fae8bb48a20ac5f20c39def80245217f2a61b7e7ccfd52175"
+    },
+    "directional": {
+      "epochs": 500,
+      "best_epoch": 9,
+      "best_sha256": "a6e6c51840e179fae38f27d23d4566b87eb29f4733e5d0425ff08f3a5d02c484",
+      "last_sha256": "a49e1c24202fa641a16ba17c02f96c78f01f38caa934ae038accccfbc2e938f5"
+    },
+    "full": {
+      "epochs": 500,
+      "best_epoch": 5,
+      "best_sha256": "0f79c4e8eb85a9649e42daaa6a0481f752e5108f897d9bf1586f2396bb62357d",
+      "last_sha256": "557632ff11cd71ae5cc253860b06fa012beef38e7b775fc4f66d1bc032bc94d8"
+    },
+    "unet_small": {
+      "epochs": 500,
+      "best_epoch": 75,
+      "best_sha256": "0dccbbdd199dc1d64b61c1943477f03aa82e0ecab82071d9067b5806c4a12bd2",
+      "last_sha256": "f4847bf7e15cd53a1860e25882e8b5bb03907868ca9bb26346ace2dd493477bc"
+    },
+    "dino_linear": {
+      "epochs": 500,
+      "best_epoch": 64,
+      "best_sha256": "fca7d596bd2b8b2e88aba7f65e3053f26ad4268be4baaea43ce260cc01686e36",
+      "last_sha256": "82981c0c9c6f2ddb1adc84606cf737ebc63e003eaed5055eb4f10aef7b5db8db"
+    },
+    "dino_pyramid": {
+      "epochs": 500,
+      "best_epoch": 110,
+      "best_sha256": "69fe9e4b54ad7f0eaae23f5defe88c1c31a316445647d06ae0e63d858840eb36",
+      "last_sha256": "e837a865486ceef7c13bf05491e473e05325186abfb292b065e11bb6fc9a224f"
+    }
+  },
+  "artifact_verification": {
+    "artifact_integrity": "PASS",
+    "frames": 192,
+    "counts": {
+      "train": 134,
+      "val": 39,
+      "test": 19
+    },
+    "variants": [
+      "baseline",
+      "directional",
+      "full",
+      "unet_small",
+      "dino_linear",
+      "dino_pyramid"
+    ],
+    "original_roi_hashes_preserved": true,
+    "invalid_padding_excluded": true,
+    "maximum_coordinate_roundtrip_error": 2.2737367544323206e-13,
+    "mm_fields_empty": true,
+    "independent_video_test": false,
+    "scientific_accuracy_verified": false,
+    "quality_records": 1152,
+    "review_assets_verified": true,
+    "representation": "triangle_vertices_v2",
+    "exactly_three_vertices": true,
+    "straight_triangle_masks_verified": true,
+    "valid_triangles": 1152,
+    "invalid_triangles": 0,
+    "epochs_per_model": 500,
+    "all_models_completed_requested_epochs": true,
+    "mrf_training_verified": true,
+    "topology_pipeline_verified": true,
+    "topology_training_verified": true
+  },
+  "assessment": {
+    "ours_first_by_metric": {
+      "val_pseudo_mask_iou": true,
+      "val_pseudo_vertex_error_normalized": true,
+      "val_flow_warp_mae": false,
+      "test_pseudo_mask_iou": true,
+      "test_pseudo_vertex_error_normalized": true,
+      "test_flow_warp_mae": false
+    },
+    "ours_best_on_all_reported_quality_metrics": false,
+    "human_accuracy_verified": false,
+    "test_is_independent_blind_test": false,
+    "note": "Ranks are within this run; pseudo-target agreement and temporal consistency are not physical accuracy. Equal final epoch budgets do not equalize architecture-search budgets."
+  },
+  "selection": "distribution060",
+  "report": {
+    "path": "reports/纺纱三角区三点定位阶段汇报.pdf",
+    "pages": 8,
+    "all_pages_visually_reviewed": true,
+    "final_prose_changes_pages_rechecked": [
+      3,
+      4
+    ],
+    "sha256": "27d8043568e588768d0ef9e6f5ea1a67a9cb4448d8ba2c7759213857fa520c71"
+  },
+  "current_document_links_valid": true
+}

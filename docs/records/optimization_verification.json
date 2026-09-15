@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "unit_tests_passed": 47,
+  "epochs_per_model": 1000,
+  "models": [
+    "baseline",
+    "full"
+  ],
+  "strict_valid_triangles": 384,
+  "invalid_triangles": 0,
+  "default_and_ours_revision": 5,
+  "checkpoint_selection": "vertex_error",
+  "predict_only_preserved_checkpoint_and_fitted_hashes": true,
+  "stale_output_removed": true,
+  "historical_baseline_checkpoints_unchanged": true,
+  "source_roi_hashes_preserved": true,
+  "review_chinese_links_verified": true,
+  "test_is_independent": false,
+  "ours_has_beaten_original_baseline": false,
+  "hashes": {
+    "baseline\\best.pt": "9a3f5d336076a79c13e596dfb60e0f17778d3655df87f315f3129b9e345ac583",
+    "baseline\\last.pt": "ac1723aaea33ca8f6e750170635931aeb74b979710fab422357cb21ba9fec7d3",
+    "full\\best.pt": "48c850252865e3a0fa7b7bf584aac85d5c52a231ddd1bc3ca2faf678ac6d655c",
+    "full\\last.pt": "cd7a439c68de8e4f627b758a250feac3ff29c9c880f39a898cec05292610ba05",
+    "topology\\fitted.pt": "d7b667011ef7ce8e97a553e57bc71ad0240a63a81ddce44e31048a33ca313c0a"
+  }
+}

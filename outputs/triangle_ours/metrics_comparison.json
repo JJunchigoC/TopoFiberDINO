@@ -1,0 +1,194 @@
+{
+  "baseline": {
+    "train": {
+      "pseudo_supervision_loss": 0.18695924709092326,
+      "pseudo_mask_iou": 0.7506307181811789,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.03331237208487382,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.030426714569330215,
+      "foreground_fraction": 0.0674603134393692
+    },
+    "val": {
+      "pseudo_supervision_loss": 0.5699215271534064,
+      "pseudo_mask_iou": 0.4999557053305977,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.07822308861292325,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.01779102347791195,
+      "foreground_fraction": 0.07012715935707092,
+      "true_annotation_count": 0
+    },
+    "test": {
+      "pseudo_supervision_loss": 0.6965768086282831,
+      "pseudo_mask_iou": 0.47466261741834126,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.0830570051544591,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.019626783207058907,
+      "foreground_fraction": 0.08257704228162766,
+      "true_annotation_count": 0
+    },
+    "model_label": "baseline"
+  },
+  "directional": {
+    "train": {
+      "pseudo_supervision_loss": 0.3970477145109604,
+      "pseudo_mask_iou": 0.5776502559260602,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.062376545213941315,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.012590995989739895,
+      "foreground_fraction": 0.07449562102556229
+    },
+    "val": {
+      "pseudo_supervision_loss": 0.5577153059152457,
+      "pseudo_mask_iou": 0.49745487101401603,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.07972298218653752,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.010636214166879654,
+      "foreground_fraction": 0.0762106254696846,
+      "true_annotation_count": 0
+    },
+    "test": {
+      "pseudo_supervision_loss": 0.5810089644632841,
+      "pseudo_mask_iou": 0.4902394914961237,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.07972067123965214,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.013750200159847736,
+      "foreground_fraction": 0.08244095742702484,
+      "true_annotation_count": 0
+    },
+    "model_label": "directional"
+  },
+  "full": {
+    "train": {
+      "pseudo_supervision_loss": 0.34878404994509116,
+      "pseudo_mask_iou": 0.6308234236269996,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.05426162192180975,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.014684977009892464,
+      "foreground_fraction": 0.06909853965044022
+    },
+    "val": {
+      "pseudo_supervision_loss": 0.5111900078944671,
+      "pseudo_mask_iou": 0.5246005316716214,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.07486281410241738,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.012243698351085186,
+      "foreground_fraction": 0.07126150280237198,
+      "true_annotation_count": 0
+    },
+    "test": {
+      "pseudo_supervision_loss": 0.5279046579411155,
+      "pseudo_mask_iou": 0.5273170800095333,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.0747516343468114,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.012902598828077316,
+      "foreground_fraction": 0.07818693667650223,
+      "true_annotation_count": 0
+    },
+    "model_label": "TopoFiberDINO Coordinate (ours)"
+  },
+  "unet_small": {
+    "train": {
+      "pseudo_supervision_loss": 0.19915892428426601,
+      "pseudo_mask_iou": 0.7226793386754706,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.038084500983579836,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.028554756194353104,
+      "foreground_fraction": 0.07159137725830078
+    },
+    "val": {
+      "pseudo_supervision_loss": 0.5441287358601888,
+      "pseudo_mask_iou": 0.5044681703291392,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.07646772418266688,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.02241572178900242,
+      "foreground_fraction": 0.07425814121961594,
+      "true_annotation_count": 0
+    },
+    "test": {
+      "pseudo_supervision_loss": 0.9190237051562259,
+      "pseudo_mask_iou": 0.44271897471276567,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.08673275301330968,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.023233601823449135,
+      "foreground_fraction": 0.07791680842638016,
+      "true_annotation_count": 0
+    },
+    "model_label": "unet_small"
+  },
+  "dino_linear": {
+    "train": {
+      "pseudo_supervision_loss": 0.3602216564007659,
+      "pseudo_mask_iou": 0.5969061101050677,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.0574523203853351,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.01660439372062683,
+      "foreground_fraction": 0.06950491666793823
+    },
+    "val": {
+      "pseudo_supervision_loss": 0.5942606589733026,
+      "pseudo_mask_iou": 0.48200720349337556,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.0774916593845074,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.01467412430793047,
+      "foreground_fraction": 0.0685211643576622,
+      "true_annotation_count": 0
+    },
+    "test": {
+      "pseudo_supervision_loss": 0.6074839767656828,
+      "pseudo_mask_iou": 0.4757620360580744,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.07888874568437275,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.010696036741137505,
+      "foreground_fraction": 0.07524409890174866,
+      "true_annotation_count": 0
+    },
+    "model_label": "dino_linear"
+  },
+  "dino_pyramid": {
+    "train": {
+      "pseudo_supervision_loss": 0.08581653315184722,
+      "pseudo_mask_iou": 0.8984383569156521,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.014088283167846168,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.036285459995269775,
+      "foreground_fraction": 0.0689978376030922
+    },
+    "val": {
+      "pseudo_supervision_loss": 0.5709417401215969,
+      "pseudo_mask_iou": 0.4949866492289249,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.08024890300555107,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.018796391785144806,
+      "foreground_fraction": 0.07534022629261017,
+      "true_annotation_count": 0
+    },
+    "test": {
+      "pseudo_supervision_loss": 0.85128737123389,
+      "pseudo_mask_iou": 0.4793656502223544,
+      "true_mask_iou": null,
+      "pseudo_vertex_error_normalized": 0.08210725533334833,
+      "note": "Triangle pseudo-label agreement; not true location accuracy.",
+      "flow_warp_mae": 0.01183185912668705,
+      "foreground_fraction": 0.07547612488269806,
+      "true_annotation_count": 0
+    },
+    "model_label": "dino_pyramid"
+  }
+}

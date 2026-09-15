@@ -1,0 +1,22 @@
+[
+  {
+    "sequence": "V01",
+    "model": "full",
+    "file": "quality/videos/V01_full.mp4",
+    "fps": 30.000000000000007,
+    "frames": 95,
+    "missing_source_frames": [
+      8
+    ],
+    "note": "Starts at first retained frame, original frame intervals; missing frames shown as blanks"
+  },
+  {
+    "sequence": "V02",
+    "model": "full",
+    "file": "quality/videos/V02_full.mp4",
+    "fps": 30.000000000000007,
+    "frames": 98,
+    "missing_source_frames": [],
+    "note": "Starts at first retained frame, original frame intervals; missing frames shown as blanks"
+  }
+]

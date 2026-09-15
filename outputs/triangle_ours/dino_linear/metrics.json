@@ -1,0 +1,23 @@
+{
+  "train": {
+    "pseudo_supervision_loss": 0.3602216564007659,
+    "pseudo_mask_iou": 0.5969061101050677,
+    "true_mask_iou": null,
+    "pseudo_vertex_error_normalized": 0.0574523203853351,
+    "note": "Triangle pseudo-label agreement; not true location accuracy."
+  },
+  "val": {
+    "pseudo_supervision_loss": 0.5942606589733026,
+    "pseudo_mask_iou": 0.48200720349337556,
+    "true_mask_iou": null,
+    "pseudo_vertex_error_normalized": 0.0774916593845074,
+    "note": "Triangle pseudo-label agreement; not true location accuracy."
+  },
+  "test": {
+    "pseudo_supervision_loss": 0.6074839767656828,
+    "pseudo_mask_iou": 0.4757620360580744,
+    "true_mask_iou": null,
+    "pseudo_vertex_error_normalized": 0.07888874568437275,
+    "note": "Triangle pseudo-label agreement; not true location accuracy."
+  }
+}

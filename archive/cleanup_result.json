@@ -1,0 +1,17 @@
+﻿{
+    "completed_at":  "2026-09-14T13:23:01.7626023-04:00",
+    "status":  "complete",
+    "archive_verified":  true,
+    "removed_paths":  [
+                          "data",
+                          "src",
+                          "reports",
+                          "runs",
+                          "requirements-unsupervised.txt",
+                          "configs/calibration.example.json",
+                          "outputs/fiberdino/baseline/predictions.pt",
+                          "outputs/fiberdino/directional/predictions.pt",
+                          "outputs/fiberdino/full/predictions.pt"
+                      ],
+    "original_roi_copy_preserved":  "dataset/images"
+}

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "training_execution": {
+    "mode": "selective_retraining",
+    "retrained_models": [
+      "full"
+    ],
+    "reused_models": [
+      "baseline",
+      "directional",
+      "unet_small",
+      "dino_linear",
+      "dino_pyramid"
+    ],
+    "epochs_per_model": 1000,
+    "early_stopping": false,
+    "replaces_previous_output": true
+  },
+  "control_checkpoints_unchanged": true,
+  "ours_retrained": true,
+  "checkpoint_sha256_before_reexport": {
+    "baseline/best.pt": "a73f4e86394fd858ee31a451b0326ce05f28c9eb8e2984d04e12edf8c6da6c89",
+    "baseline/last.pt": "8a6b649a66a646ba1fa8c9fc756fd50f899c2760a79a1997a59da95f86f9b889",
+    "directional/best.pt": "9a15c34a8ef4bcf0eebb46c3a168b76c52ba2fdaaada860a96b1066dd2ddf19a",
+    "directional/last.pt": "91a09507f21c3664ae6626ea6edf3b37dd9861e535e2059d3e1aa8b788d46570",
+    "full/best.pt": "0ba5a346a92d5471b6e8182012d66a6be6bfd68d210f4da3de2db216b5729107",
+    "full/last.pt": "7ee549e104e30d7d7b1207a7cf6c750488e914c3f84ed3ad7f7949e22b8346ee",
+    "unet_small/best.pt": "375301c91e09985743a761dda85537c125e9aa60e5ee64b4ec294833f09dc474",
+    "unet_small/last.pt": "f5a09e3e76c78b6a201e6cefa0417d1b5a52afe28591a1230753eaab5e7aadaa",
+    "dino_linear/best.pt": "a4ea3a3a4369f517f31d3a6edaff516d446a6de7534d6b484221491ba0cf223a",
+    "dino_linear/last.pt": "4c7981e63459de55fde7704a75305c2e65eb80b27feee21bdbf8dc05d71b6542",
+    "dino_pyramid/best.pt": "ee1746171d143a0bdc1f5b2fc8089a0a07df6146c8e517c7d47d2420ef67c6a6",
+    "dino_pyramid/last.pt": "249f5619898abb010a35e7b06cf1b7483628cbaddf5a96a7b3d956f9522a810f"
+  },
+  "reference_sha256_before_reexport": {
+    "best.pt": "4c294c126a2ca59b305074188490e426b15e32ce1fcbdbea304b816f0511d6b0",
+    "history.json": "06cc40481e1f2873ecc3faa83959224f9af1e1c55f70365c7195862cd36360a3",
+    "metrics.json": "9f791c33b18632b598a45f29bd82040961b42556a006948b43edfd57ae637f8e",
+    "predictions.json": "0776f82d7cef463882af34888f364f8b3b31e4da8ff2772c5b73fdf51fef6ca1",
+    "provenance.json": "4e631604fa476e5ddd014f30efae3ae36a28d75fdbd6bcc6bfd709d37baab042",
+    "selection.json": "9ca0ccf8dab26285047a54c3b5d79cb3d90d13b7c8999e441ca1c27e7975bceb",
+    "training_summary.json": "0cb0c7315babeaed9bf4135ae9410491fea0b46bc8484f3264c5cb128af92248"
+  },
+  "unit_tests_passed": 29,
+  "predict_only_reexport_verified": true,
+  "checkpoints_and_ablation_reference_preserved": true,
+  "stale_output_removed": true,
+  "pending_and_backup_removed": true,
+  "verification": {
+    "artifact_integrity": "PASS",
+    "frames": 192,
+    "counts": {
+      "train": 134,
+      "val": 39,
+      "test": 19
+    },
+    "variants": [
+      "baseline",
+      "directional",
+      "full",
+      "unet_small",
+      "dino_linear",
+      "dino_pyramid"
+    ],
+    "original_roi_hashes_preserved": true,
+    "invalid_padding_excluded": true,
+    "maximum_coordinate_roundtrip_error": 2.2737367544323206e-13,
+    "mm_fields_empty": true,
+    "independent_video_test": false,
+    "scientific_accuracy_verified": false,
+    "quality_records": 1152,
+    "review_assets_verified": true,
+    "representation": "triangle_vertices_v2",
+    "exactly_three_vertices": true,
+    "straight_triangle_masks_verified": true,
+    "valid_triangles": 1152,
+    "invalid_triangles": 0,
+    "epochs_per_model": 1000,
+    "all_models_completed_requested_epochs": true,
+    "mrf_training_verified": true
+  },
+  "inspected_figures": [
+    "figures/mrf_comparison_preview.png",
+    "figures/mrf_learning_curves_preview.png"
+  ],
+  "browser_visual_check": "not performed"
+}

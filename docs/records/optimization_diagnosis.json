@@ -1,0 +1,77 @@
+{
+  "test_evaluated": false,
+  "support": {
+    "train": {
+      "frames": 134,
+      "old_apex_height_exclusions": 39,
+      "old_base_x_exclusions": 5,
+      "union_exclusions": 42,
+      "scene_head_exclusions": 0
+    },
+    "val": {
+      "frames": 39,
+      "old_apex_height_exclusions": 11,
+      "old_base_x_exclusions": 1,
+      "union_exclusions": 12,
+      "scene_head_exclusions": 0
+    }
+  },
+  "checkpoint_consistency": {
+    "baseline": {
+      "actual_validation": {
+        "pseudo_supervision_loss": 0.5179872421117929,
+        "pseudo_mask_iou": 0.49343503203574207,
+        "true_mask_iou": null,
+        "pseudo_vertex_error_normalized": 0.08125106187967154,
+        "note": "Triangle pseudo-label agreement; not true location accuracy."
+      },
+      "stored_validation": {
+        "pseudo_supervision_loss": 0.5179872421117929,
+        "pseudo_mask_iou": 0.49343503203574207,
+        "true_mask_iou": null,
+        "pseudo_vertex_error_normalized": 0.08125106187967154,
+        "note": "Triangle pseudo-label agreement; not true location accuracy."
+      },
+      "matches": true
+    },
+    "full": {
+      "actual_validation": {
+        "pseudo_supervision_loss": 0.5465877040838584,
+        "pseudo_mask_iou": 0.4931124175547092,
+        "true_mask_iou": null,
+        "pseudo_vertex_error_normalized": 0.0838707685470581,
+        "note": "Triangle pseudo-label agreement; not true location accuracy."
+      },
+      "stored_validation": {
+        "pseudo_supervision_loss": 0.5465877040838584,
+        "pseudo_mask_iou": 0.4931124175547092,
+        "true_mask_iou": null,
+        "pseudo_vertex_error_normalized": 0.0838707685470581,
+        "note": "Triangle pseudo-label agreement; not true location accuracy."
+      },
+      "matches": true
+    }
+  },
+  "gradient_alignment_at_old_full_best": {
+    "coordinates": {
+      "mean_cosine_with_region": 0.7636254556588272,
+      "conflicting_frames": 0,
+      "frames": 134
+    },
+    "boundary": {
+      "mean_cosine_with_region": 0.6310796156636814,
+      "conflicting_frames": 11,
+      "frames": 134
+    },
+    "vertices": {
+      "mean_cosine_with_region": 0.37361478162651407,
+      "conflicting_frames": 25,
+      "frames": 134
+    },
+    "mrf": {
+      "mean_cosine_with_region": 0.07920499251627211,
+      "conflicting_frames": 60,
+      "frames": 134
+    }
+  }
+}

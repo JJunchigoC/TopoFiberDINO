@@ -1,0 +1,23 @@
+{
+  "epochs_run": 500,
+  "epochs_requested": 500,
+  "early_stopping": false,
+  "best_epoch": 64,
+  "last_epoch": 500,
+  "inference_checkpoint": "best.pt",
+  "stop_reason": "completed_requested_epochs",
+  "elapsed_seconds": 85.54628670000238,
+  "trainable_parameters": 2887,
+  "temporal_loss_enabled": false,
+  "ground_truth_used": false,
+  "mrf": null,
+  "topology": null,
+  "checkpoint_selection": "vertex_error",
+  "validation_selection_score": 0.0774916593845074,
+  "model_info": {
+    "label": "DINO linear probe",
+    "backbone": "DINOv2-S/14 Registers",
+    "auxiliary": false,
+    "temporal": false
+  }
+}

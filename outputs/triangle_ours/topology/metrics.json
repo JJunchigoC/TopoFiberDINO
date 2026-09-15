@@ -1,0 +1,20 @@
+{
+  "metrics": {
+    "train": {
+      "frames": 134,
+      "histogram_mae": 0.28269929515628783,
+      "proportion_mae": 0.07203137072553831
+    },
+    "val": {
+      "frames": 39,
+      "histogram_mae": 0.295105364979603,
+      "proportion_mae": 0.08547253763446441
+    },
+    "test": {
+      "frames": 19,
+      "histogram_mae": 0.2929655931718451,
+      "proportion_mae": 0.08605698755893268
+    }
+  },
+  "meaning": "Self-supervised topology reconstruction; not location accuracy."
+}

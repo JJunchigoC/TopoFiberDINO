@@ -1,0 +1,6 @@
+numpy>=1.26
+opencv-python>=4.9
+scipy>=1.12
+torch>=2.6,<3
+matplotlib>=3.8
+gudhi>=3.11,<4

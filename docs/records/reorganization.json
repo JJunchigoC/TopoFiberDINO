@@ -1,0 +1,39 @@
+{
+  "moves": {
+    "docs/cleanup.json": "docs/records/cleanup.json",
+    "docs/mrf_experiment.json": "docs/records/mrf_experiment.json",
+    "docs/optimization_before.json": "docs/records/optimization_before.json",
+    "docs/optimization_diagnosis.json": "docs/records/optimization_diagnosis.json",
+    "docs/optimization_reference.json": "docs/records/optimization_reference.json",
+    "docs/optimization_selection.json": "docs/records/optimization_selection.json",
+    "docs/optimization_test_breakdown.json": "docs/records/optimization_test_breakdown.json",
+    "docs/optimization_verification.json": "docs/records/optimization_verification.json",
+    "docs/region_selection_result.json": "docs/records/region_selection_result.json",
+    "docs/replacement_check.json": "docs/records/replacement_check.json",
+    "docs/topology_verification.json": "docs/records/topology_verification.json",
+    "configs/legacy_v3.json": "configs/experiments/legacy_v3.json",
+    "configs/legacy_v4.json": "configs/experiments/legacy_v4.json",
+    "configs/optimization_trials.json": "configs/experiments/optimization_trials.json",
+    "scripts/diagnose_model.py": "tools/experiments/diagnose_model.py",
+    "scripts/publish_optimization.py": "tools/experiments/publish_optimization.py",
+    "scripts/validate_optimization.py": "tools/experiments/validate_optimization.py"
+  },
+  "preserved_data_and_model_files": 420,
+  "training_performed": false,
+  "preserved_hashes_verified": true,
+  "unit_tests_passed": 47,
+  "prepare_only_passed": true,
+  "current_models": [
+    "full"
+  ],
+  "current_valid_triangles": 192,
+  "prior_dual_model_records_are_historical": true,
+  "report": "reports/纺纱三角区三点定位阶段汇报.pdf",
+  "report_pages": 7,
+  "report_figures": 6,
+  "all_pdf_pages_visually_reviewed": true,
+  "document_export": "Independent ReportLab PDF; bundled LibreOffice absent and Word COM failed; unverified DOCX kept only as internal source",
+  "relative_document_links_verified": true,
+  "obsolete_script_bytecode_removed": true,
+  "report_sha256": "029ef4a899d7550fc7dcd80f2a0f51ea67ba6f41886be934235fb060108f0a19"
+}

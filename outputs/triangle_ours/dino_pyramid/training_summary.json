@@ -1,0 +1,23 @@
+{
+  "epochs_run": 500,
+  "epochs_requested": 500,
+  "early_stopping": false,
+  "best_epoch": 110,
+  "last_epoch": 500,
+  "inference_checkpoint": "best.pt",
+  "stop_reason": "completed_requested_epochs",
+  "elapsed_seconds": 220.28951919998508,
+  "trainable_parameters": 120463,
+  "temporal_loss_enabled": false,
+  "ground_truth_used": false,
+  "mrf": null,
+  "topology": null,
+  "checkpoint_selection": "vertex_error",
+  "validation_selection_score": 0.08024890300555107,
+  "model_info": {
+    "label": "DINO multiscale decoder",
+    "backbone": "DINOv2-S/14 Registers",
+    "auxiliary": false,
+    "temporal": false
+  }
+}

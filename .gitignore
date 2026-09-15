@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+
+# Dataset, weights, historical experiments and reports are intentionally not
+# ignored here: their archival/versioning policy requires a separate decision.
