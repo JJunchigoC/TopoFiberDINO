@@ -75,7 +75,6 @@ python main.py --prepare-only
 
 ## 🔗 报告与数据导航
 
-* 📊 **汇报文档**：[给老师的图文汇报 PDF](https://www.google.com/search?q=reports/%E7%BA%BA%E7%BA%B1%E4%B8%89%E8%A7%92%E5%8C%BA%E4%B8%89%E7%82%B9%E5%AE%9A%E4%BD%8D%E9%98%B6%E6%AE%B5%E6%B1%87%E6%8A%A5.pdf)
 * 🔍 **交互式可视化**：[逐帧复核网页 HTML](https://www.google.com/search?q=outputs/triangle_ours/review.html)
 * 🖼️ **全模型对比**：[固定帧效果对比图](https://www.google.com/search?q=outputs/triangle_ours/figures/all_models_comparison.png)
 * 📄 **指标数据**：[完整指标 JSON](https://www.google.com/search?q=outputs/triangle_ours/comparison/study500.json) | [逐帧误差数据 JSON](https://www.google.com/search?q=outputs/triangle_ours/comparison/study500_frames.json)
